@@ -51,3 +51,8 @@ def by_room(devices):
         rooms[room].append(device["name"])
 
     return rooms
+list_devices(readings)
+print(average_temp(readings))
+print(hottest(readings))
+print(to_status(readings[3]))
+print(by_room(readings))

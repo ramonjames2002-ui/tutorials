@@ -9,3 +9,12 @@ readings = [
 def list_devices(devices):
     for device in devices:
         print(device["name"], device["temp"])
+
+def average_temp(devices):
+    total = 0
+
+    for device in devices:
+        total += device["temp"]
+
+    return total / len(devices)
+

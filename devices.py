@@ -38,3 +38,16 @@ def to_status(device):
         "status": status,
         "celsius": device["temp"]
     }
+
+def by_room(devices):
+    rooms = {}
+
+    for device in devices:
+        room = device["room"]
+
+        if room not in rooms:
+            rooms[room] = []
+
+        rooms[room].append(device["name"])
+
+    return rooms

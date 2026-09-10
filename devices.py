@@ -18,3 +18,11 @@ def average_temp(devices):
 
     return total / len(devices)
 
+def hottest(devices):
+    hottest_device = devices[0]
+
+    for device in devices:
+        if device["temp"] > hottest_device["temp"]:
+            hottest_device = device
+
+    return hottest_device
